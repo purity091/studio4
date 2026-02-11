@@ -1,9 +1,18 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = process.env.API_KEY;
+if (!apiKey || apiKey === 'PLACEHOLDER_API_KEY') {
+  console.warn("API Key is missing or using placeholder. AI features will not work.");
+}
+
+const ai = apiKey ? new GoogleGenAI(apiKey) : null;
 
 export async function generateSlideContent(topic: string) {
+  if (!ai) {
+    console.error("AI service is not initialized: API Key missing.");
+    return null;
+  }
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
     contents: `Generate an infographic slide content in Arabic about: ${topic}. 
