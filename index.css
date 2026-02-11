@@ -161,6 +161,24 @@ body {
     color: #d1d5db;
 }
 
+/* --- Header Actions --- */
+
+.header-right-side {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.download-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s;
+}
+
+.download-icon:hover {
+    transform: translateY(-2px);
+}
+
 /* --- Action Buttons --- */
 
 .header-actions {
@@ -752,4 +770,103 @@ body {
     max-width: 140px;
     object-fit: contain;
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+}
+
+.footer-badges-container {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.empty-logo-box {
+    width: 4px;
+    height: 4px;
+}
+
+/* --- Utility / Helper Classes --- */
+
+.space-y-4>*+* {
+    margin-top: 16px;
+}
+
+.space-y-3>*+* {
+    margin-top: 12px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.gap-2 {
+    gap: 8px;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.border-t {
+    border-top: 1px solid var(--border-medium);
+}
+
+.pt-6 {
+    padding-top: 24px;
 }

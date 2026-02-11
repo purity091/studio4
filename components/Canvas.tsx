@@ -153,13 +153,13 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
         <div className="canvas-footer">
           <div className="canvas-footer-content">
             {/* Right Side (Start in RTL) - Squares */}
-            <div className="flex gap-2">
+            <div className="footer-badges-container">
               <div className="social-badge" style={{ backgroundColor: accent }}>IN</div>
               <div className="social-badge" style={{ backgroundColor: secondary }}>IG</div>
             </div>
 
             {/* Left Side (End in RTL) - Logo Only */}
-            <div className="flex flex-col items-end justify-end h-full">
+            <div className="footer-logo-container">
               {slide.logoUrl ? (
                 <img
                   src={slide.logoUrl}
@@ -169,7 +169,7 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
                 />
               ) : (
                 /* Empty div to maintain layout structure without text */
-                <div className="w-1 h-1"></div>
+                <div className="empty-logo-box"></div>
               )}
             </div>
           </div>

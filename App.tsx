@@ -70,13 +70,13 @@ const App: React.FC = () => {
 
     try {
       setIsDownloading(true);
-      
+
       // Wait for fonts
       await document.fonts.ready;
-      
+
       // Small delay for DOM stability
       await new Promise(r => setTimeout(r, 600));
-      
+
       const canvas = await html2canvas(element, {
         useCORS: true,
         allowTaint: true,
@@ -88,7 +88,7 @@ const App: React.FC = () => {
           if (el) {
             el.style.boxShadow = 'none';
             el.style.transform = 'none';
-            
+
             // Fix text rendering
             const allText = el.querySelectorAll('h1, p, span');
             allText.forEach((t: any) => {
@@ -98,7 +98,7 @@ const App: React.FC = () => {
           }
         }
       });
-      
+
       const image = canvas.toDataURL('image/png', 1.0);
       const link = document.createElement('a');
       link.download = `infographic-${Date.now()}.png`;
@@ -114,9 +114,9 @@ const App: React.FC = () => {
 
   return (
     <div className="app-wrapper" dir="rtl">
-      <EditorSidebar 
-        slide={activeSlide} 
-        updateSlide={updateSlide} 
+      <EditorSidebar
+        slide={activeSlide}
+        updateSlide={updateSlide}
         onMagicWrite={handleMagicWrite}
         isGenerating={isGenerating}
       />
@@ -135,10 +135,10 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          
-          <div className="flex items-center gap-4">
+
+          <div className="header-right-side">
             <div className="nav-controls">
-              <button 
+              <button
                 disabled={activeSlideIndex === 0}
                 onClick={() => setActiveSlideIndex(i => i - 1)}
                 className="nav-button"
@@ -150,7 +150,7 @@ const App: React.FC = () => {
                 <span className="nav-counter-divider">/</span>
                 <span>{project.slides.length}</span>
               </div>
-              <button 
+              <button
                 disabled={activeSlideIndex === project.slides.length - 1}
                 onClick={() => setActiveSlideIndex(i => i + 1)}
                 className="nav-button"
@@ -158,8 +158,8 @@ const App: React.FC = () => {
                 <ChevronLeft className="w-5 h-5" />
               </button>
             </div>
-            
-            <button 
+
+            <button
               onClick={addNewSlide}
               className="button-secondary"
             >
@@ -167,7 +167,7 @@ const App: React.FC = () => {
               شريحة
             </button>
 
-            <button 
+            <button
               onClick={downloadImage}
               disabled={isDownloading}
               className="button-primary"
@@ -175,7 +175,7 @@ const App: React.FC = () => {
               {isDownloading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
               ) : (
-                <Download className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
+                <Download className="download-icon" />
               )}
               {isDownloading ? 'جاري الرندر...' : 'تصدير بجودة مطابقة'}
             </button>
