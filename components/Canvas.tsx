@@ -133,7 +133,7 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
                 </div>
 
                 {/* Text Block */}
-                <div className="canvas-point-text-block" style={{ alignItems: isLeft ? 'flex-start' : 'flex-end', textAlign: isLeft ? 'right' : 'left' }}>
+                <div className="canvas-point-text-block" style={{ alignItems: 'center', textAlign: 'center' }}>
                   <div className="mb-1 w-fit">
                     <span className="canvas-point-title-badge export-text-fix"
                       style={{ borderColor: accent, color: accent }}>

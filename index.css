@@ -704,7 +704,7 @@ body {
 }
 
 .canvas-point-text-block {
-    align-items: anchor-center;
+    align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -712,6 +712,8 @@ body {
 }
 
 .canvas-point-title-badge {
+    align-self: center;
+    text-align: center;
     background-color: white;
     padding: 4px 10px;
     font-size: 0.75rem;
@@ -723,6 +725,8 @@ body {
 }
 
 .canvas-point-description {
+    align-self: center;
+    text-align: center;
     font-size: 10px;
     line-height: 1.3;
     opacity: 0.9;
