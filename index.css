@@ -636,8 +636,9 @@ body {
 }
 
 .canvas-main-area {
-    flex: 1;
-    position: relative;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
 }
 
 .canvas-center-visual {
@@ -712,8 +713,10 @@ body {
 }
 
 .canvas-footer {
-    margin-top: auto;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     z-index: 20;
     flex-shrink: 0;
 }
