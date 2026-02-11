@@ -870,3 +870,81 @@ body {
 .pt-6 {
     padding-top: 24px;
 }
+
+/* Logo Selection Gallery */
+.logo-suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-suggestion-item {
+    aspect-ratio: 1;
+    background: #0D1137;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-suggestion-item:hover {
+    background: #1a1f4d;
+    transform: translateY(-2px);
+}
+
+.logo-suggestion-item.active {
+    border-color: #00E1C1;
+    box-shadow: 0 0 15px rgba(0, 225, 193, 0.2);
+    background: #1a1f4d;
+}
+
+.logo-suggestion-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.delete-button-icon {
+    padding: 8px;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-button-icon:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* Canvas Logo Styles */
+.canvas-logo {
+    max-width: 120px;
+    max-height: 45px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 45px;
+    min-width: 120px;
+}
+
+.empty-logo-box {
+    width: 120px;
+    height: 45px;
+}

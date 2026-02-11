@@ -158,6 +158,26 @@ const EditorSidebar: React.FC<EditorSidebarProps> = ({ slide, updateSlide, onMag
 
             <div className="form-group">
               <label className="label-small">شعار الجهة (اللوغو)</label>
+
+              {/* Logo Selection Gallery */}
+              <div className="logo-suggestions-grid mb-3">
+                {[
+                  { id: 'logo1', url: '/logos/Logo.svg', label: 'شعار 1' },
+                  { id: 'logo2', url: '/logos/Logo (1).svg', label: 'شعار 2' },
+                  { id: 'logo3', url: '/logos/Logo (2).svg', label: 'شعار 3' },
+                  { id: 'logo4', url: '/logos/alinvestor white.svg', label: 'المستثمر' },
+                ].map((logo) => (
+                  <button
+                    key={logo.id}
+                    onClick={() => updateSlide({ ...slide, logoUrl: logo.url })}
+                    className={`logo-suggestion-item ${slide.logoUrl === logo.url ? 'active' : ''}`}
+                    title={logo.label}
+                  >
+                    <img src={logo.url} alt={logo.label} className="w-full h-full object-contain" />
+                  </button>
+                ))}
+              </div>
+
               <div className="flex gap-2 items-center">
                 <input
                   type="file"
@@ -171,7 +191,7 @@ const EditorSidebar: React.FC<EditorSidebarProps> = ({ slide, updateSlide, onMag
                   className="upload-button"
                 >
                   <ImageIcon className="w-4 h-4" />
-                  {slide.logoUrl ? 'تغيير اللوغو' : 'رفع لوغو'}
+                  {slide.logoUrl ? 'تغيير اللوغو' : 'رفع لوغو مخصص'}
                 </button>
                 {slide.logoUrl && (
                   <button
