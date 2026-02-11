@@ -553,7 +553,7 @@ body {
     border-radius: 12px;
     border: 2px solid #f3f4f6;
     transition: all 0.2s;
-    text-align: right;
+    text-align: center;
     position: relative;
     overflow: hidden;
     background: none;
@@ -704,6 +704,8 @@ body {
 }
 
 .canvas-point-text-block {
+    align-items: anchor-center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     width: 100%;
