@@ -153,27 +153,26 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
         <div className="canvas-footer" style={{ backgroundColor: `${accent}0A`, borderTop: `1px solid ${secondary}33` }}>
           <div className="canvas-footer-content">
             {/* Right Side (Start in RTL) - Distinctive Name */}
-            <div className="footer-right-container" style={{ display: 'flex', alignItems: 'center', gap: '14px', height: '100%' }}>
-              <div style={{ position: 'relative', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="footer-right-container" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <div style={{ position: 'relative', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <div style={{ position: 'absolute', inset: 0, backgroundColor: secondary, transform: 'rotate(45deg)', borderRadius: '4px', opacity: 0.9 }}></div>
                 <div style={{ position: 'absolute', width: '10px', height: '10px', backgroundColor: accent, borderRadius: '2px', transform: 'rotate(45deg)', zIndex: 10 }}></div>
               </div>
-              <div className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 900, fontSize: '1.2rem', letterSpacing: '-0.5px', display: 'flex', alignItems: 'center', height: '100%' }}>
+              <p className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 900, fontSize: '1.2rem', margin: 0, padding: 0 }}>
                 منصة المستثمر الاقتصادية
-              </div>
+              </p>
             </div>
 
             {/* Left Side (End in RTL) - Professional URL (No Logo) */}
             <div className="footer-link-container" style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '12px',
-              height: '100%'
+              gap: '12px'
             }}>
-              <div style={{ width: '30px', height: '2px', backgroundColor: secondary, opacity: 0.8 }}></div>
-              <div className="export-text-fix" style={{ color: accent, fontWeight: 800, fontSize: '1.1rem', letterSpacing: '1px', display: 'flex', alignItems: 'center', height: '100%' }}>
+              <div style={{ width: '30px', height: '2px', backgroundColor: secondary, opacity: 0.8, flexShrink: 0 }}></div>
+              <p className="export-text-fix" style={{ color: accent, fontWeight: 800, fontSize: '1.1rem', margin: 0, padding: 0, direction: 'ltr' }}>
                 al-investor.com
-              </div>
+              </p>
             </div>
           </div>
 
