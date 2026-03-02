@@ -152,10 +152,13 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
         {/* Footer */}
         <div className="canvas-footer">
           <div className="canvas-footer-content">
-            {/* Right Side (Start in RTL) - Squares */}
-            <div className="footer-badges-container">
+            {/* Right Side (Start in RTL) */}
+            <div className="footer-right-container" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <div className="social-badge" style={{ backgroundColor: accent }}>IN</div>
               <div className="social-badge" style={{ backgroundColor: secondary }}>IG</div>
+              <span className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 700, fontSize: '1rem', marginRight: '8px' }}>
+                منصة المستثمر الاقتصادية
+              </span>
             </div>
 
             {/* Left Side (End in RTL) - Logo Only */}

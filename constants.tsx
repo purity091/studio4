@@ -110,7 +110,7 @@ export const DEFAULT_PROJECT = {
       header: '"صُنع في الصين"',
       subHeader: "شعار يقود بكين للتواجد في كل منزل بالعالم",
       mainImageUrl: "/china-map.png",
-      logoUrl: "",
+      logoUrl: "/logos/Logo.svg",
       accentColor: "#CC0000",
       secondaryColor: "#FFDE00",
       backgroundColor: "#FFFFFF",
