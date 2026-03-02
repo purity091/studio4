@@ -150,30 +150,31 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
         </div>
 
         {/* Footer */}
-        <div className="canvas-footer">
-          <div className="canvas-footer-content">
-            {/* Right Side (Start in RTL) */}
-            <div className="footer-right-container" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: accent }}></div>
-              <span className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 700, fontSize: '1rem' }}>
+        <div className="canvas-footer" style={{ backgroundColor: `${accent}0A`, borderTop: `1px solid ${secondary}33` }}>
+          <div className="canvas-footer-content" style={{
+            height: '72px',
+            padding: '0 40px',
+            alignItems: 'center'
+          }}>
+            {/* Right Side (Start in RTL) - Distinctive Name */}
+            <div className="footer-right-container" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <div style={{ position: 'relative', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ position: 'absolute', inset: 0, backgroundColor: secondary, transform: 'rotate(45deg)', borderRadius: '4px', opacity: 0.9 }}></div>
+                <div style={{ position: 'absolute', width: '10px', height: '10px', backgroundColor: accent, borderRadius: '2px', transform: 'rotate(45deg)', zIndex: 10 }}></div>
+              </div>
+              <span className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 900, fontSize: '1.2rem', letterSpacing: '-0.5px' }}>
                 منصة المستثمر الاقتصادية
               </span>
             </div>
 
-            {/* Left Side (End in RTL) - Logo and Link */}
-            <div className="footer-logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
-              {slide.logoUrl ? (
-                <img
-                  src={slide.logoUrl}
-                  alt="Logo"
-                  crossOrigin="anonymous"
-                  className="canvas-logo"
-                />
-              ) : (
-                /* Empty div to maintain layout structure without text */
-                <div className="empty-logo-box"></div>
-              )}
-              <span className="export-text-fix" style={{ color: textColor, fontWeight: 500, fontSize: '0.85rem', opacity: 0.8 }}>
+            {/* Left Side (End in RTL) - Professional URL (No Logo) */}
+            <div className="footer-link-container" style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px'
+            }}>
+              <div style={{ width: '30px', height: '2px', backgroundColor: secondary, opacity: 0.8 }}></div>
+              <span className="export-text-fix" style={{ color: accent, fontWeight: 800, fontSize: '1.1rem', letterSpacing: '1px' }}>
                 al-investor.com
               </span>
             </div>
