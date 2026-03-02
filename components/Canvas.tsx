@@ -154,15 +154,14 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
           <div className="canvas-footer-content">
             {/* Right Side (Start in RTL) */}
             <div className="footer-right-container" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <div className="social-badge" style={{ backgroundColor: accent }}>IN</div>
-              <div className="social-badge" style={{ backgroundColor: secondary }}>IG</div>
-              <span className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 700, fontSize: '1rem', marginRight: '8px' }}>
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: accent }}></div>
+              <span className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 700, fontSize: '1rem' }}>
                 منصة المستثمر الاقتصادية
               </span>
             </div>
 
-            {/* Left Side (End in RTL) - Logo Only */}
-            <div className="footer-logo-container">
+            {/* Left Side (End in RTL) - Logo and Link */}
+            <div className="footer-logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
               {slide.logoUrl ? (
                 <img
                   src={slide.logoUrl}
@@ -174,6 +173,9 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
                 /* Empty div to maintain layout structure without text */
                 <div className="empty-logo-box"></div>
               )}
+              <span className="export-text-fix" style={{ color: textColor, fontWeight: 500, fontSize: '0.85rem', opacity: 0.8 }}>
+                al-investor.com
+              </span>
             </div>
           </div>
 
