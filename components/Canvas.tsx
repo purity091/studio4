@@ -152,7 +152,7 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
         {/* Footer */}
         <div className="canvas-footer" style={{ backgroundColor: `${accent}0A`, borderTop: `1px solid ${secondary}33` }}>
           <div className="canvas-footer-content" style={{
-            height: '72px',
+            height: '50px',
             padding: '0 40px',
             alignItems: 'center'
           }}>
