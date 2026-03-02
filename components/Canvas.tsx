@@ -151,18 +151,14 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
 
         {/* Footer */}
         <div className="canvas-footer" style={{ backgroundColor: `${accent}0A`, borderTop: `1px solid ${secondary}33` }}>
-          <div className="canvas-footer-content" style={{
-            height: '50px',
-            padding: '0 40px',
-            alignItems: 'center'
-          }}>
+          <div className="canvas-footer-content">
             {/* Right Side (Start in RTL) - Distinctive Name */}
             <div className="footer-right-container" style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <div style={{ position: 'relative', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ position: 'absolute', inset: 0, backgroundColor: secondary, transform: 'rotate(45deg)', borderRadius: '4px', opacity: 0.9 }}></div>
                 <div style={{ position: 'absolute', width: '10px', height: '10px', backgroundColor: accent, borderRadius: '2px', transform: 'rotate(45deg)', zIndex: 10 }}></div>
               </div>
-              <span className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 900, fontSize: '1.2rem', letterSpacing: '-0.5px' }}>
+              <span className="footer-company-name export-text-fix" style={{ color: textColor, fontWeight: 900, fontSize: '1.2rem', letterSpacing: '-0.5px', marginTop: '-2px' }}>
                 منصة المستثمر الاقتصادية
               </span>
             </div>
@@ -174,7 +170,7 @@ const Canvas: React.FC<CanvasProps> = ({ slide }) => {
               gap: '12px'
             }}>
               <div style={{ width: '30px', height: '2px', backgroundColor: secondary, opacity: 0.8 }}></div>
-              <span className="export-text-fix" style={{ color: accent, fontWeight: 800, fontSize: '1.1rem', letterSpacing: '1px' }}>
+              <span className="export-text-fix" style={{ color: accent, fontWeight: 800, fontSize: '1.1rem', letterSpacing: '1px', marginTop: '-2px' }}>
                 al-investor.com
               </span>
             </div>
