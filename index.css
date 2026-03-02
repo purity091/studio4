@@ -743,7 +743,7 @@ body {
 }
 
 .canvas-footer-content {
-    height: 64px;
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
